@@ -23,6 +23,12 @@ module.exports = {
     path: __dirname + "/src/",
     filename: "client.min.js"
   },
+  resolve: {
+    alias: {
+      'react': path.join(__dirname, 'node_modules', 'react'),
+    },
+    extensions: ['', '.js', '.jsx', '.scss', '.css'],
+  },
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
