@@ -2,7 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 
 import { fetchUser } from "../actions/userActions"
-import { fetchTweets } from "../actions/tweetsActions"
+import { fetchTweets, addTweet} from "../actions/tweetsActions"
 
 @connect((store) => {
   return {
@@ -17,14 +17,14 @@ export default class Layout extends React.Component {
   }
 
   fetchTweets() {
-    this.props.dispatch(fetchTweets())
+    this.props.dispatch(addTweet())
   }
 
   render() {
     const { user, tweets } = this.props;
 
     if (!tweets.length) {
-      return <button onClick={this.fetchTweets.bind(this)}>load tweets</button>
+      return <button onClick={this.fetchTweets.bind(this)}>load 333 tweets</button>
     }
 
     const mappedTweets = tweets.map(tweet => <li key={tweet.id}>{tweet.text}</li>)

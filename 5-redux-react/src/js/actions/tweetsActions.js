@@ -12,6 +12,7 @@ export function fetchTweets() {
     */
     axios.get("http://rest.learncode.academy/api/reacttest/tweets")
       .then((response) => {
+        console.log(response)
         dispatch({type: "FETCH_TWEETS_FULFILLED", payload: response.data})
       })
       .catch((err) => {

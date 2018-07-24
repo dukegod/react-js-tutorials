@@ -25,6 +25,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "build": "./node_modules/.bin/webpack webpack.config.js",
     "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
