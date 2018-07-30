@@ -1,4 +1,4 @@
-export default function reducer(state={
+export default function reducer(state = {
     tweets: [],
     fetching: false,
     fetched: false,
@@ -13,6 +13,7 @@ export default function reducer(state={
         return {...state, fetching: false, error: action.payload}
       }
       case "FETCH_TWEETS_FULFILLED": {
+        console.log(action)
         return {
           ...state,
           fetching: false,
