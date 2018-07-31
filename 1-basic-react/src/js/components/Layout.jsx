@@ -5,6 +5,8 @@ import Header from "./Header";
 
 import LifeCycle from './lifecycle';
 
+import ContextTop from './context';
+
 export default class Layout extends React.Component {
   constructor() {
     super();
@@ -21,8 +23,10 @@ export default class Layout extends React.Component {
     return (
       <div>
         {/* <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} /> */}
-        <LifeCycle />
         {/* <Footer/> */}
+        {/* <LifeCycle /> */}
+        <ContextTop />
+        
       </div>
     );
   }
