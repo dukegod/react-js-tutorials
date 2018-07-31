@@ -3,6 +3,8 @@ import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 
+import LifeCycle from './lifecycle';
+
 export default class Layout extends React.Component {
   constructor() {
     super();
@@ -18,8 +20,9 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
-        <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
-        <Footer/>
+        {/* <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} /> */}
+        <LifeCycle />
+        {/* <Footer/> */}
       </div>
     );
   }
