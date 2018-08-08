@@ -4,6 +4,10 @@ import { connect } from "react-redux"
 import { fetchUser, setUserAge, setUserName } from "../actions/userActions"
 import { fetchTweets, addTweet, updateTweet, deleteTweet} from "../actions/tweetsActions"
 
+import acarray from '../actions';
+
+console.log(acarray);
+
 import ViewContent from './view';
 import Profile from './profile';
 
