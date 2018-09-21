@@ -15,7 +15,12 @@ export default class Counter extends React.Component {
     this.state = {
       counter: 0
     }
-    console.log('this.state componentWillMount', this.state.counter)
+    console.log('this.state componentWillMount-父组件', this.state.counter)
+  }
+
+  componentDidMount() {
+    
+    console.log('this.state componentDidMount-父组件', this.state.counter)
   }
 
   shouldComponentUpdate(newProps, newState) {
@@ -42,7 +47,7 @@ export default class Counter extends React.Component {
 
   render() {
     console.log('%crender' + '%c 父组件渲染中...', 'font-weight:bold', '')
-    console.log('nextState', this.state.counter)
+    console.log('nextState 父组件', this.state.counter)
     console.log('\n')
     return (
       <div>
