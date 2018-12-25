@@ -5,10 +5,6 @@ import OneLev from './oneLev';
 
 export default class ContextTop extends React.Component{
 
-  defaultProps = {
-    propsVal: '通过props传递的数据方式'
-  }
-
   getChildContext() {
     return {
       contextVal: '通过context获取上下文数据的方式'
@@ -16,12 +12,15 @@ export default class ContextTop extends React.Component{
   }
 
   render() {
-    console.log(this)
-    return <OneLev propsVal={this.defaultProps.propsVal} />
+    return <OneLev propsVal={this.propsVal} />
   }
 
 }
 
+ContextTop.defaultProps = {
+  propsVal: '通过props传递的数据方式'
+}
+
 ContextTop.childContextTypes = {
-  contextVal: React.PropTypes.string
+  contextVal: PropTypes.string
 }

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 export default class LastOne extends React.Component{
 
   render() {
+    console.log(this);
     return (
       <div> 
         <p> <span>来自props：</span> {this.props.propsVal} </p>
@@ -15,5 +16,5 @@ export default class LastOne extends React.Component{
 }
 
 LastOne.contextTypes = {
-  contextVal: React.PropTypes.string
+  contextVal: PropTypes.string
 }
