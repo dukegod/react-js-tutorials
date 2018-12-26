@@ -4,6 +4,8 @@ import ReactDOM from "react-dom";
 
 import Number from './number';
 
+import Output from './output';
+
 export default class Counter extends React.Component {
   constructor(props) {
     super(props)
@@ -24,6 +26,8 @@ export default class Counter extends React.Component {
   }
 
   shouldComponentUpdate(newProps, newState) {
+    console.log(newProps);
+    console.log(newState);
     const result = true
     console.info('%cshouldComponentUpdate' + '%c 返回判断是否要更新父组件' + `%c ${result}`, 'font-weight:bold', 'color: #ff3c41', 'font-weight:bold;color: #236fd4')
     return result;
@@ -64,6 +68,7 @@ export default class Counter extends React.Component {
           onClick={() => this.unMount()}>
           卸载
         </button>
+        <Output></Output>
       </div>
     )
   }

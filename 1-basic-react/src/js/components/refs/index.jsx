@@ -1,36 +1,26 @@
 import React from 'react'
+import Myrefs from './ref';
 
-export default class Myrefs extends React.Component {
+export default class ParentRefs extends React.Component{
   constructor(props) {
-    super(props);
+    super(props)
   }
 
-  focus() {
-    console.log(this.textInput)
-    this.textInput.focus();
-  }
-
-  getInputValue(e) {
-    console.log(e.target.value)
+  handle() {
+    console.log(this.parentRf)
+    this.parentRf()
   }
 
   render() {
-    return (
+    return(
       <div>
-        <p> </p>
-        <input
-          onChange={(e) => {
-            this.getInputValue(e)
-          }}
-          ref={(input) => {
-            // console.log(input)
-            this.textInput = input
-          }}
-        />
-        <button type="button" onClick={
-          this.focus.bind(this)
-        }>点击我获取焦点
-        </button>
+        <h2> 来自父组件的关怀 </h2>
+        <Myrefs ref={ 
+          (rf)=>{
+            console.log(rf);
+            this.parentRf = rf
+          }
+        }></Myrefs>
       </div>
     )
   }
